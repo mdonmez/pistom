@@ -9,11 +9,7 @@ mcp = FastMCP("Pistom MCP Server")
 def run_python_code(code: str) -> Optional[str]:
     """
     Executes given Python code with Python 3.10.0 interpreter.
-    This tool is useful for solving math, coding, logical, and other problems.
-    Example:
-        Problem: Count the number of 'r' in the word 'strawberry'.
-        Tool Input: print(f'{"strawberry".count("r")}')
-        Tool Output: 3
+    This tool is useful for solving math, coding, logical, and other problems that can be solved with Python.
 
     Args:
         code (str): The source code to execute.

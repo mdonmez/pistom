@@ -1,7 +1,7 @@
 [project]
 name = "pistom"
 version = "0.1.0"
-description = "Piston API MCP server to enable LLM to run Python code."
+description = "Piston API MCP server to enable LLMs to run Python code."
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
