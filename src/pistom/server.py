@@ -34,5 +34,9 @@ def run_python_code(code: str) -> Optional[str]:
         return f"Error: {e}"
 
 
+def main():
+    mcp.run()
+
+
 if __name__ == "__main__":
-    mcp.run(transport="stdio")
+    main()

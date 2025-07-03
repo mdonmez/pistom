@@ -1,10 +1,18 @@
 [project]
 name = "pistom"
 version = "0.1.0"
-description = "Piston API MCP server to enable LLMs to run Python code."
+description = "Piston API MCP server to enable LLM to run Python code."
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "httpx>=0.28.1",
     "mcp[cli]>=1.10.1",
 ]
+
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
