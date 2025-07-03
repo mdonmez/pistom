@@ -1,5 +1,4 @@
-
-# Project Title
+# Pistom - MCP for Piston
 
 *Piston API MCP server to enable LLMs to run Python code.*
 
@@ -14,9 +13,8 @@
 * Remote code execution to eliminate safety risks
 
 > [!WARNING]
->
-> From [Piston's documentation](https://github.com/engineer-man/piston):
-> The Piston API is rate limited to 5 requests per second....
+> *"The Piston API is rate limited to 5 requests per second..."*  
+> — [Piston's documentation](https://github.com/engineer-man/piston)
 
 ## Installation
 
@@ -54,5 +52,5 @@ Thanks to;
  
 ## License
 
-This project is licensed under [MIT](https://choosealicense.com/licenses/mit/) license.
+This project is licensed under [MIT](/LICENSE) license.
 
