@@ -46,16 +46,16 @@ sequenceDiagram
 
 ## Key Features
 
-*   **On-Demand Code Execution**: Instantly grant any LLM the ability to run Python code.
-*   **Zero-Configuration**: No API keys, sign-ups, or environment variables needed. It just works.
-*   **Secure by Design**: Code is executed in a remote, sandboxed environment provided by Piston, eliminating risks to your local machine.
-*   **Lightweight & Zero-Maintenance**: Thanks to `uv`, the server is fetched and run directly from GitHub, ensuring you always have the latest version without manual updates.
+- **On-Demand Code Execution**: Instantly grant any LLM the ability to run Python code.
+- **Zero-Configuration**: No API keys, sign-ups, or environment variables needed. It just works.
+- **Secure by Design**: Code is executed in a remote, sandboxed environment provided by Piston, eliminating risks to your local machine.
+- **Lightweight & Zero-Maintenance**: Thanks to `uv`, the server is fetched and run directly from GitHub, ensuring you always have the latest version without manual updates.
 
 ## Usage
 
 ### Prerequisites
 
-*   You must have [**`uv`**](https://docs.astral.sh/uv/) installed.
+- You must have [**`uv`**](https://docs.astral.sh/uv/) installed.
 
 ### 1. Running Standalone (for Testing)
 
@@ -75,13 +75,8 @@ Here is an example configuration snippet:
 
 ```json
 "pistom": {
-  "command": "uvx",
-  "args": [
-    "--from",
-    "git+https://github.com/mdonmez/pistom.git@master",
-    "pistom"
-  ]
-}
+      "url": "https://pistom.fastmcp.app/mcp"
+    }
 ```
 
 That's it! Your client is now empowered with Python code execution capabilities.
@@ -91,7 +86,7 @@ That's it! Your client is now empowered with Python code execution capabilities.
 > [!WARNING]
 > The public Piston API is rate-limited.
 >
-> *"The Piston API is rate limited to 5 requests per second..."*  
+> _"The Piston API is rate limited to 5 requests per second..."_  
 > — [Piston's documentation](https://github.com/engineer-man/piston)
 >
 > Please be mindful of this limit in your applications.
@@ -99,8 +94,9 @@ That's it! Your client is now empowered with Python code execution capabilities.
 ## Acknowledgements
 
 Thanks to:
--   **[Piston](https://github.com/engineer-man/piston)** for the the free, public code execution engine.
--   **[Model-Context-Protocol (MCP)](https://github.com/modelcontextprotocol)** for the protocol and SDK.
+
+- **[Piston](https://github.com/engineer-man/piston)** for the the free, public code execution engine.
+- **[Model-Context-Protocol (MCP)](https://github.com/modelcontextprotocol)** for the protocol and SDK.
 
 ## Contributing
 
