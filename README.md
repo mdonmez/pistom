@@ -75,8 +75,8 @@ Here is an example configuration snippet:
 
 ```json
 "pistom": {
-      "url": "https://pistom.fastmcp.app/mcp"
-    }
+    "url": "https://pistom.fastmcp.app/mcp"
+}
 ```
 
 That's it! Your client is now empowered with Python code execution capabilities.
