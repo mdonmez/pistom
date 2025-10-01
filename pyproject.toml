@@ -5,6 +5,7 @@ description = "Piston API MCP server to enable LLMs to run Python code."
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "fastmcp>=2.12.4",
     "httpx>=0.28.1",
     "mcp[cli]>=1.10.1",
 ]
