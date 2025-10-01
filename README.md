@@ -49,7 +49,6 @@ sequenceDiagram
 - **On-Demand Code Execution**: Instantly grant any LLM the ability to run Python code.
 - **Zero-Configuration**: No API keys, sign-ups, or environment variables needed. It just works.
 - **Secure by Design**: Code is executed in a remote, sandboxed environment provided by Piston, eliminating risks to your local machine.
-- **Lightweight & Zero-Maintenance**: Thanks to `uv`, the server is fetched and run directly from GitHub, ensuring you always have the latest version without manual updates.
 
 ## Usage
 
