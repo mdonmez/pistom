@@ -2,7 +2,6 @@ import httpx
 from typing import Optional
 from mcp.server.fastmcp import FastMCP
 
-# Define the global server object. The runtime will find this.
 mcp = FastMCP("Pistom MCP Server")
 
 
@@ -10,12 +9,17 @@ mcp = FastMCP("Pistom MCP Server")
 async def run_python_code(code: str) -> Optional[str]:
     """
     Executes given Python code with Python 3.10.0 interpreter.
-    ... (docstring content) ...
+    This tool is useful for solving math, coding, logical, and other problems that can be solved with Python.
+
+    Args:
+        code (str): The source code to execute.
+
+    Returns:
+        Optional[str]: Output from the code execution, or None if request fails.
     """
     payload = {"language": "python", "version": "3.10.0", "files": [{"content": code}]}
 
     try:
-        # Crucially, this must be async/await
         async with httpx.AsyncClient(timeout=10.0) as client:
             response = await client.post(
                 "https://emkc.org/api/v2/piston/execute", json=payload
