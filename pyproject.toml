@@ -1,9 +1,9 @@
 [project]
 name = "pistom"
-version = "0.1.0"
+version = "0.2.0"
 description = "Piston API MCP server to enable LLMs to run Python code."
 readme = "README.md"
-requires-python = ">=3.12"
+requires-python = ">=3.14"
 dependencies = [
     "fastmcp>=2.12.4",
     "httpx>=0.28.1",
