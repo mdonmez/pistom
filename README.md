@@ -49,34 +49,19 @@ sequenceDiagram
 - **On-Demand Code Execution**: Instantly grant any LLM the ability to run Python code.
 - **Zero-Configuration**: No API keys, sign-ups, or environment variables needed. It just works.
 - **Secure by Design**: Code is executed in a remote, sandboxed environment provided by Piston, eliminating risks to your local machine.
-- **Lightweight & Zero-Maintenance**: Thanks to `uv`, the server is fetched and run directly from GitHub, ensuring you always have the latest version without manual updates.
 
 ## Usage
 
-### Prerequisites
-
-- You must have [**`uv`**](https://docs.astral.sh/uv/) installed.
-
-### 1. Running Standalone (for Testing)
-
-You can start the server directly from your terminal to test its functionality.
-
-```bash
-uvx --from git+https://github.com/mdonmez/pistom.git@master pistom
-```
-
-This command will download, install, and run the server in one step. The server will start and wait for connections from an MCP client, so it should work without errors.
-
-### 2. Integrating with an MCP Client
+### Integrating with an MCP Client
 
 To use Pistom with a compatible client, add it to the client's MCP server configuration. The client will then be able to start and communicate with Pistom automatically.
 
-Here is an example configuration snippet:
+Here is the configuration snippet:
 
 ```json
 "pistom": {
-      "url": "https://pistom.fastmcp.app/mcp"
-    }
+    "url": "https://pistom.fastmcp.app/mcp"
+}
 ```
 
 That's it! Your client is now empowered with Python code execution capabilities.
