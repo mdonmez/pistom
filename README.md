@@ -1,8 +1,15 @@
 # Pistom
 
+> [!IMPORTANT]
+> This repository is archived and kept for reference only.
+>
+> As of Feb 15, 2026, the public [Piston API](https://github.com/engineer-man/piston) is no longer freely available. Authorization is only granted at EngineerMan's discretion, and is generally limited to non-commercial, low-volume, educational use cases.
+>
+> If you want to keep using Pistom, run your own Piston instance and update the server to point at it.
+
 ### A Model-Context-Protocol (MCP) Server for Piston
 
-Pistom is a lightweight, zero-configuration server that connects any [Model-Context-Protocol (MCP)](https://github.com/modelcontextprotocol) compatible client (like an LLM agent) to the [Piston API](https://github.com/engineer-man/piston). It provides a secure and sandboxed environment for executing Python code on-demand.
+Pistom is a lightweight MCP server that connects any [Model-Context-Protocol (MCP)](https://github.com/modelcontextprotocol) compatible client (like an LLM agent) to a Piston instance. It was originally designed around the public API, but this repository is now archived and is no longer maintained.
 
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
@@ -11,17 +18,22 @@ Pistom is a lightweight, zero-configuration server that connects any [Model-Cont
 
 ## Table of Contents
 
+- [Project Status](#project-status)
 - [How It Works](#how-it-works)
 - [Key Features](#key-features)
 - [Usage](#usage)
-- [Important Note: Rate Limiting](#important-note-rate-limiting)
 - [Acknowledgements](#acknowledgements)
-- [Contributing](#contributing)
 - [License](#license)
+
+## Project Status
+
+Pistom is archived.
+
+The code in this repository is preserved as-is and should be treated as historical reference. The public Piston service it was built against is no longer freely open, so existing setups may require authorization or a self-hosted Piston deployment.
 
 ## How It Works
 
-Pistom acts as a simple, stateless proxy. It receives a code execution request from an MCP client, forwards it to the public Piston API, and then formats Piston's response back into the MCP specification for the client.
+Pistom acts as a simple, stateless proxy. It receives a code execution request from an MCP client, forwards it to a Piston API instance, and then formats Piston's response back into the MCP specification for the client.
 
 ```mermaid
 sequenceDiagram
@@ -46,46 +58,38 @@ sequenceDiagram
 
 ## Key Features
 
-- **On-Demand Code Execution**: Instantly grant any LLM the ability to run Python code.
-- **Zero-Configuration**: No API keys, sign-ups, or environment variables needed. It just works.
-- **Secure by Design**: Code is executed in a remote, sandboxed environment provided by Piston, eliminating risks to your local machine.
+- **On-Demand Code Execution**: Grant an MCP-compatible client the ability to run Python code through Piston.
+- **Simple Integration**: The server exposes a minimal MCP tool surface for code execution workflows.
+- **Sandboxed Execution**: Code runs in a remote Piston environment rather than on the local machine.
 
 ## Usage
 
 ### Integrating with an MCP Client
 
-To use Pistom with a compatible client, add it to the client's MCP server configuration. The client will then be able to start and communicate with Pistom automatically.
+If you are running your own copy of Pistom, add it to your client's MCP server configuration as you normally would for a local or hosted MCP server.
 
-Here is the configuration snippet:
+If you are relying on the historical public Piston endpoint, first confirm that you have authorization to use it. Without that authorization, the public service may reject requests.
+
+Example configuration:
 
 ```json
 "pistom": {
-    "url": "https://pistom.fastmcp.app/mcp"
+    "url": "https://YOUR-HOSTED-PISTOM-OR-MCP-ENDPOINT/mcp"
 }
 ```
 
-That's it! Your client is now empowered with Python code execution capabilities.
-
-## Important Note: Rate Limiting
-
-> [!WARNING]
-> The public Piston API is rate-limited.
->
-> _"The Piston API is rate limited to 5 requests per second..."_  
-> — [Piston's documentation](https://github.com/engineer-man/piston)
->
-> Please be mindful of this limit in your applications.
+If you fork this repository for your own use, update the Piston base URL in [src/pistom/server.py](src/pistom/server.py) to match your deployment.
 
 ## Acknowledgements
 
 Thanks to:
 
-- **[Piston](https://github.com/engineer-man/piston)** for the the free, public code execution engine.
+- **[Piston](https://github.com/engineer-man/piston)** for the code execution engine this project was built around.
 - **[Model-Context-Protocol (MCP)](https://github.com/modelcontextprotocol)** for the protocol and SDK.
 
 ## Contributing
 
-Contributions are welcome! If you have a feature request, bug report, or pull request, please feel free to open an issue or submit a PR on the GitHub repository.
+This repository is archived, so contributions are no longer being accepted.
 
 ## License
 
